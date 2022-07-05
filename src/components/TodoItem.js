@@ -10,7 +10,17 @@ function TodoItem(props) {
           props.handleChangeProps(props.todo.id);
         }}
       />
+
       {props.todo.title}
+
+      <button
+        type="button"
+        onClick={() => {
+          props.deleteTodoProps(props.todo.id);
+        }}
+      >
+        Delete
+      </button>
     </li>
   );
 }
